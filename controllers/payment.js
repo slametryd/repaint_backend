@@ -5,8 +5,8 @@ import Booking from "../models/booking.js";
 const router = express.Router();
 
 const snap = new midtransClient.Snap({
-  isProduction: false,
-  serverKey: "SB-Mid-server-SZqlmFjsOEBfj5YGDVrDvxyu",
+  isProduction: true,
+  serverKey: process.env.MIDTRANS_SERVER_KEY,
 });
 
 //Snap Token
