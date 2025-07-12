@@ -23,6 +23,7 @@
     "midtrans-client": "^1.4.2",
     "multer": "^2.0.0",
     "mysql2": "^3.14.1",
+    "nodemailer": "^7.0.5",
     "sequelize": "^6.37.7"
   },
   "devDependencies": {
