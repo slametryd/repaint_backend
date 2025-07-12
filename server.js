@@ -10,7 +10,7 @@ import bookingRoutes, {
 } from "./controllers/booking_routes.js";
 import motorOptions from "./controllers/motorOptions.js";
 import paymentRoutes from "./controllers/payment.js";
-import emailRoutes from "./controllers/nodemailer.js";
+// import emailRoutes from "./controllers/nodemailer.js";
 
 // import midtransWebhookRoutes from "./controllers/midtransWebhook.js";
 
@@ -34,7 +34,7 @@ app.use("/uploads", express.static("uploads"));
 app.use("/api", bookingRoutes);
 app.use("/api", motorOptions);
 app.use("/api", paymentRoutes);
-app.use("/api", emailRoutes);
+// app.use("/api", emailRoutes);
 app.put("/api/booking-status/:orderId", updateBookingStatus);
 
 // app.use("/api", midtransWebhookRoutes);
