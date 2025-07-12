@@ -9,6 +9,8 @@ dotenv.config();
 import crypto from "crypto";
 import nodemailer from "nodemailer";
 
+const FrontendUrl = process.env.FRONTEND_URL;
+
 // 🔹 GET all users (kecuali password/token)
 export const getUsers = async (req, res) => {
   try {
@@ -210,7 +212,7 @@ export const forgotPassword = async (req, res) => {
     expiresIn: "15m",
   });
 
-  const resetLink = `http://localhost:5173/reset-password/${resetToken}`;
+  const resetLink = `${FrontendUrl}/reset-password/${resetToken}`;
 
   // Kirim email
   const transporter = nodemailer.createTransport({
